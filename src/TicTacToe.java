@@ -7,6 +7,8 @@ public class TicTacToe {
 	        createArray();
 	        System.out.println("Please enter your choice ,X - O");
 	        makeChoice();
+	        createBoard();
+	        
 	    }
 	 
 	    static void createArray(){
@@ -32,5 +34,20 @@ public class TicTacToe {
 	            computer = 'X';
 	        }
 	    }
+	    
+	    public static void createBoard(){
+	    	char[] arr = new char[10];
+	        arr[0] = ' ';
+	        for(int i=1; i<10; i++){
+	            arr[i] = ' ';
+	        }
+	    	for (int i = 1; i <= arr.length - 1; i++) {
+	            if (i == 3 || i == 6 || i == 9) {
+	                System.out.println(arr[i]);
+	            } else {
+	                System.out.print(arr[i] + "_" + "|" +"_");
+	            }
+	        }
 
+}
 }
